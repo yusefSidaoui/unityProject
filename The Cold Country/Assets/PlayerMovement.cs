@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
+    public Rigidbody2D gun;
 
     Vector2 movement;
 
@@ -21,5 +22,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        gun.MovePosition(gun.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
